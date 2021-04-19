@@ -40,18 +40,15 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 	
-	var a_canvas = document.getElementById("a"); // makes it easier to indentify the canvas as "a"
+const canvas = document.getElementById('canvas'); //more easily identifies the canvas as canvas
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = 'green'; //this fill the rectangle with a green color
+ctx.fillRect(20, 10, 150, 100); //fills the rectangle 
 	
-	function draw_b() {
-  
-		var b_canvas = document.getElementById("b");
- 
-		var b_context = b_canvas.getContext("2d");
- 
-		b_context.fillRect(50, 25, 150, 100); // this should fill the rectangle 
-}
+ctx.font = "30px Arial"; // this sets the font for what my name will be written with
+ctx.strokeText("Vivian", 10, 50); // this codes for writing my name onto the canvas
 	
-	
+ctx.clearRect(0, 0, canvas.width, canvas.height); //this clears the canvas of anything on it
 	
 </script>
 
@@ -89,12 +86,12 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 	<p>Canvas</p>
 	
-	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas>
-	<a onclick=".b_context.fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a rectangle!!!!-->
+	<canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;"></canvas> <!--this codes for the canvas itself and the dimensions of it-->
+	<a onclick="fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a green rectangle!!!!-->
 
-	<a onclick="b_canvas.width = b_canvas.width;" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
+	<a onclick="clearRect();" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
 	
-	
+	<a onclick="strokeText();" class="w3-btn w3-black">Write name.</a><!--this button writes my name onto the canvas-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
