@@ -38,11 +38,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+	
 	var a_canvas = document.getElementById("a"); // makes it easier to indentify the canvas as "a"
+	
 	function draw_b() {
-  var b_canvas = document.getElementById("b");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
+  
+		var b_canvas = document.getElementById("b");
+ 
+		var b_context = b_canvas.getContext("2d");
+ 
+		b_context.fillRect(50, 25, 150, 100); // this should fill the rectangle 
 }
 	
 	
@@ -83,9 +89,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 	<p>Canvas</p>
 	
-	<canvas id="a" width="300" height="225"></canvas>
-	
-	<a onclick="fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a rectangle!!!!-->
+	<canvas id="a" width="300" height="225" style="border:1px solid #000000;"></canvas>
+	<a onclick=".b_context.fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a rectangle!!!!-->
 
 	<a onclick="b_canvas.width = b_canvas.width;" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
 	
