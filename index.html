@@ -38,27 +38,33 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-	
-	
-var canvas = document.getElementById('canvas'); //more easily identifies the canvas as canvas
 
-	
+
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillRect(45, 45, 60, 60);
+    ctx.clearRect(45, 45, 60, 60);
+  }
+}	
 	
 function fillRect(){
 	
-	canvas.fillRect(20, 10, 150, 100); //fills the rectangle 
-	canvas.fillStyle = 'green'; //this fill the rectangle with a green color
+	ctx.fillRect(20, 10, 150, 100); //fills the rectangle 
+	ctx.fillStyle = 'green'; //this fill the rectangle with a green color
 }
 
 function strokeText(){
 	
-	canvas.font = "30px Arial"; // this sets the font for what my name will be written with
-	canvas.strokeText("Vivian", 10, 50); // this codes for writing my name onto the canvas
+	ctx.font = '30px Arial'; // this sets the font for what my name will be written with
+	ctx.strokeText("Vivian", 10, 50); // this codes for writing my name onto the canvas
 	
 }
 function clearRect(){
 	
-	canvas.clearRect(0, 0, canvas.width, canvas.height); //this clears the canvas of anything on it
+	ctx.clearRect(0, 0, canvas.width, canvas.height); //this clears the canvas of anything on it
 }
 	
 	
@@ -99,13 +105,14 @@ function clearRect(){
 	<p>Canvas</p>
 	
 	<canvas id="canvas" width="400" height="300" style="border:1px solid #000000;"></canvas> <!--this codes for the canvas itself and the dimensions of it-->
-	<a onclick="fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a green rectangle!!!!-->
+	
+	<a href="#one" onclick="fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a green rectangle!!!!-->
 
-	<a onclick="clearRect();" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
+	<a href="#one" onclick="clearRect();" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
 	
-	<a onclick="strokeText();" class="w3-btn w3-black">Write name.</a><!--this button writes my name onto the canvas-->
+	<a href="#one" onclick="strokeText();" class="w3-btn w3-black">Write name.</a><!--this button writes my name onto the canvas-->
 	
-	<a onclick=show image  class="w3-btn w3-black">Load image.</a><!--this button loads an image-->
+	<a href="#one" onclick=show image  class="w3-btn w3-black">Load image.</a><!--this button loads an image-->
 	
 <footer class="w3-bottom w3-container w3-flat-peter-river">
 	<p>DIY!</p>
