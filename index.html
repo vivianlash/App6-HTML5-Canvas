@@ -42,14 +42,19 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 const canvas = document.getElementById('canvas'); //more easily identifies the canvas as canvas
 const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green'; //this fill the rectangle with a green color
-function ctx.fillRect(20, 10, 150, 100); //fills the rectangle 
 	
-ctx.font = "30px Arial"; // this sets the font for what my name will be written with
-function ctx.strokeText("Vivian", 10, 50); // this codes for writing my name onto the canvas
-	
-function ctx.clearRect(0, 0, canvas.width, canvas.height); //this clears the canvas of anything on it
-	
+function fillRect() {
+	ctx.fillRect(20, 10, 150, 100); //fills the rectangle 
+	ctx.fillStyle = 'green'; //this fill the rectangle with a green color
+	}
+
+function strokeText() {
+	ctx.strokeText("Vivian", 10, 50); // this codes for writing my name onto the canvas
+	ctx.font = "30px Arial"; // this sets the font for what my name will be written with
+	}
+function clearRect() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height); //this clears the canvas of anything on it
+	}
 </script>
 
 
