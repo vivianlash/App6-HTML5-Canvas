@@ -40,19 +40,22 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 	
-const canvas = document.getElementById('canvas'); //more easily identifies the canvas as canvas
-const ctx = canvas.getContext('2d');
-	
-function fillRect() {
+function fillRect(){
+	var canvas = document.getElementById('canvas'); //more easily identifies the canvas as canvas
+	var ctx = canvas.getContext('2d');
 	ctx.fillRect(20, 10, 150, 100); //fills the rectangle 
 	ctx.fillStyle = 'green'; //this fill the rectangle with a green color
 	}
 
-function strokeText() {
+function strokeText(){
+	var canvas = document.getElementById('canvas'); //more easily identifies the canvas as canvas
+	var ctx = canvas.getContext('2d');
 	ctx.strokeText("Vivian", 10, 50); // this codes for writing my name onto the canvas
 	ctx.font = "30px Arial"; // this sets the font for what my name will be written with
 	}
-function clearRect() {
+function clearRect(){
+	var canvas = document.getElementById('canvas'); //more easily identifies the canvas as canvas
+	var ctx = canvas.getContext('2d');
 	ctx.clearRect(0, 0, canvas.width, canvas.height); //this clears the canvas of anything on it
 	}
 </script>
