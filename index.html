@@ -44,9 +44,6 @@ function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
-
-    ctx.fillRect(45, 45, 60, 60);
-    ctx.clearRect(45, 45, 60, 60);
   }
 }	
 	
@@ -115,13 +112,13 @@ img, object{
 	
 	<canvas id="canvas" width="400" height="300" style="border:1px solid #000000;"></canvas> <!--this codes for the canvas itself and the dimensions of it-->
 	
-	<a  onclick="fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a green rectangle!!!!-->
+	<a  href="canvas" onclick="fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a green rectangle!!!!-->
 
-	<a  onclick="clearRect();" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
+	<a  href="canvas" onclick="clearRect();" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
 	
-	<a  onclick="strokeText();" class="w3-btn w3-black">Write name.</a><!--this button writes my name onto the canvas-->
+	<a  href="canvas" onclick="strokeText();" class="w3-btn w3-black">Write name.</a><!--this button writes my name onto the canvas-->
 	
-	<a  onclick="displayImage();" class="w3-btn w3-black">Load image.</a><!--this button loads an image-->
+	<a  href="canvas" onclick="displayImage();" class="w3-btn w3-black">Load image.</a><!--this button loads an image-->
 	
 	
 	
