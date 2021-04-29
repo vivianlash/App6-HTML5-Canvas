@@ -40,35 +40,33 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 
-function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-  }
-}	
+function draw_a() { // code for the function that draws the rectangle
+	var a_canvas = document.getElementById("a");
+	var a_context = a_canvas.getContext("2d");
+	a_context.fillRect(15, 15, 30, 50); // code for the size of the rectangle
+}
 	
-function fillRect(){
-	
-	ctx.fillRect(20, 10, 150, 100); //fills the rectangle 
-	ctx.fillStyle = 'green'; //this fill the rectangle with a green color
+function draw_b() { //code for my name to pop up within the canvas
+	var b_canvas = document.getElementById("a");
+	var b_context = b_canvas.getContext("2d");
+	b_context.fillText("Vivian Lash", 50, 80); 
 }
 
-function strokeText(){
-	
-	ctx.font = '30px Arial'; // this sets the font for what my name will be written with
-	ctx.strokeText("Vivian", 10, 50); // this codes for writing my name onto the canvas
-	
+function draw_c() { //code function for the image to pop up in my canvas
+	var c_canvas = document.getElementById("a");
+	var c_context = c_canvas.getContext("2d");
+	var panda = new Image();
+	panda.src = "https://i.pinimg.com/564x/e0/3d/5b/e03d5b812b2734826f76960eca5b5541.jpg";
+	panda.onload = function() {
+	c_context.drawImage(panda, 100, 20, 100, 100);
+	};
 }
-function clearRect(){
 	
-	ctx.clearRect(0, 0, canvas.width, canvas.height); //this clears the canvas of anything on it
+function draw_d() { //this is the function so that the canvas can be cleared
+	var d_canvas = document.getElementById("a");
+	var d_context = d_canvas.getContext("2d");
+	d_context.clearRect(1, 1, 200, 200);
 }
-	
-	
-function displayImage(){
-	var image = <img src="panda.jpeg" alt="Panda Bear" width="760" height="760">
-		
-} 
 	
 </script>
 
@@ -107,18 +105,22 @@ img, object{
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
-	<p>Canvas</p>
 	
-	<canvas id="canvas" width="400" height="300" style="border:1px solid #000000;"></canvas> <!--this codes for the canvas itself and the dimensions of it-->
 	
-	<a  href="canvas" onclick="fillRect();" class="w3-btn w3-black">Draw a rectangle.</a> <!--This is a button that when clicked will draw a green rectangle!!!!-->
-
-	<a  href="canvas" onclick="clearRect();" class="w3-btn w3-black">Clear canvas.</a><!--this button will clear the canvas when clicked!-->
+	<center><canvas id="a" width="auto" height="auto" style="border : 1px solid #000000;"></canvas><center> 
+		<!--this codes for the rectangle with the solid line border-->
+		
+	<center><button onclick = "draw_a();">Draw Rectangle</button><center> 
+		<!--this codes for the button to draw the rectangle on the screen when it's clicked on-->
 	
-	<a  href="canvas" onclick="strokeText();" class="w3-btn w3-black">Write name.</a><!--this button writes my name onto the canvas-->
+	<center><button onclick = "draw_b();">Draw Name</button><center> 
+		<!--this codes for the button to draw my name on the screen when it's clicked on-->
 	
-	<a  href="canvas" onclick="displayImage();" class="w3-btn w3-black">Load image.</a><!--this button loads an image-->
+	<center><button onclick = "draw_c();">Draw Image</button><center> 
+		<!--this codes for the button to make the panda picture come up-->
+		
+	<center><button onclick = "draw_d();">Clear Canvas</button><center> 
+		<!--this codes for the button to clear the canvas-->
 	
 	
 	
