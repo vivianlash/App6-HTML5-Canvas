@@ -40,13 +40,13 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 
-function draw_a() { // code for the function that draws the rectangle
+function draw_a() { // codes for the function that draws the rectangle
 	var a_canvas = document.getElementById("a");
 	var a_context = a_canvas.getContext("2d");
-	a_context.fillRect(15, 15, 30, 50); // code for the size of the rectangle
+	a_context.fillRect(15, 15, 30, 50); // code for the size and dimensions of the rectangle
 }
 	
-function draw_b() { //code for my name to pop up within the canvas
+function draw_b() { //codes for my name to pop up on the canvas
 	var b_canvas = document.getElementById("a");
 	var b_context = b_canvas.getContext("2d");
 	b_context.fillText("Vivian Lash", 50, 80); 
@@ -122,7 +122,7 @@ img, object{
 	<center><button onclick = "draw_d();">Clear Canvas</button><center> 
 		<!--this codes for the button to clear the canvas-->
 	
-	
+	</canvas>
 	
 <footer class="w3-bottom w3-container w3-flat-peter-river">
 	<p>DIY!</p>
